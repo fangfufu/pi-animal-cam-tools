@@ -15,7 +15,7 @@ while True:
     lux_avg = lux_avg * 0.9 + sensor.lux * 0.1
     if lux_avg > 25:
         daymode.on()
-    elif lux_avg < 20:
+    elif lux_avg < 25:
         daymode.off()
 
     print("Lux: {:.2f}, Lux Avg: {:.2f}, Day Mode: {}".format(sensor.lux, lux_avg, daymode.is_active))
